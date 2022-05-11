@@ -7,16 +7,20 @@
 addNum,subNum,multNum,divNum = addSubMulDiv(10,20)
 print(addNum,subNum,multNum,divNum)
 """
-def Revert(Num,Last=2):
-    if Last%2==0:
-        Last=Last+1
+def checkDivisible(num1,num2):
+    if(num1%num2 == 0 ):
+        return True
     else:
-        Last=Last-1
-    for C in range(1,Last+1):
-        Num+=C
-    print(Num)
-A,B=20,4
-Revert(A,B)
-B=B-1
-Revert(B)
+        return False
 
+def listWherValAreSqNosBetwn1Nd30 ():
+    sqList = []
+    for i in range(1,31):
+        sqList.append(i**2)
+    return sqList
+
+def recursivSumOfNos (num):
+    if num == 0:
+        return 0
+    else:
+        return(num**2+recursivSumOfNos(num-1))
