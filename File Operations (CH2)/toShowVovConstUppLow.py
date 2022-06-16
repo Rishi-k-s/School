@@ -1,3 +1,4 @@
+
 file_handlr = open("D:\School\File Operations (CH2)\school_Dat.txt","r")
 line_list = file_handlr.readlines()
 vovels = 'aeiouAEIOU'
@@ -6,7 +7,7 @@ for each_line in line_list:
     for each_letter in each_line:
         if each_letter in vovels:
             vovCounter+=1
-        if each_letter not in vovels:
+        elif each_letter not in vovels and each_letter.isalpha():
             consonantCount+=1
         if each_letter.isupper():
             upperCount +=1
