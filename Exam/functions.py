@@ -1,11 +1,10 @@
 
-def facto():
-    x= int (input('Entwr a number:')) # 10
-    i = 1
-    count =1
-    while i<= x:
-        count *= i
-        i+=1
-    print(count)
-
-facto()
+def printit(list2):
+    m=n =  list2[0]
+    for a in list2:
+        if a<n:
+            n=a
+        if a>m:
+            m=a
+        print(m,n)
+list

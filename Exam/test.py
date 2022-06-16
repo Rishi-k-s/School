@@ -1,7 +1,11 @@
-import math
 
-num1 = 10
-print(math.sqrt(num1))
+T = int(input())
+for tc in range(T):
+	# Read integers a and b.
+	(a, b) = map(int(input("Emter sm thing").split(' ')), int(input("Emter sm thing").split(' ')))
+	
+	ans = a + b
+	print(ans)
 
 
 """
