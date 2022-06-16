@@ -19,8 +19,7 @@ with open("D:\School\File Operations (CH2)\school_Dat.txt", "r+") as file_handle
             file_handle.writelines(fullDetails)
         wantToRead = input('Want to Read (yes/no):')
         if wantToRead == 'yes':
-            for lines in file_handle:
-                print(file_handle.read())
+            print(file_handle.read())
             break
         else:
             break
