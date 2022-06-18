@@ -1,15 +1,17 @@
 import csv
 
+# file methords
 file_handlr = open(r"File Operations (CH2)\userList.csv","a+",newline='\n')
 writer_file = csv.writer(file_handlr,)
 reader_file = csv.reader(file_handlr)
 
+#boolians
 createUsersBool = True
 readUserBool = True
 
+#create user and add it to CSV file functions
 def createUserCSV (getNoOfUserToAdd):
     userCounter=1
-    header_add = writer_file.writerow(['name','password','Mail ID','Phone No.'])
     for each_user in range(getNoOfUserToAdd):
         username_gettr = input("Name of user {}: ".format(userCounter))
         password_check = True
@@ -26,6 +28,7 @@ def createUserCSV (getNoOfUserToAdd):
         writer_file.writerow(user_Details_List)
         userCounter +=1
 
+#reading user details from CSV file
 def searchUserCSV(userName,psswrd):
     userNOtExists = False
     userExists = False
@@ -40,10 +43,12 @@ def searchUserCSV(userName,psswrd):
     if(userNOtExists == True and userExists == False):
         print("The user: {} does not exists".format(userName))
 
+#Starting menu
 get_createOrSearchUser = int(input("1 => Create user\n2 => Search User\n3 => Quit\n=>"))
 
+#menu functions
 if (get_createOrSearchUser == 1):
-    while createUsersBool: 
+    while createUsersBool == True: 
         getNoOfUsers = int(input("How many users u want to add: "))
         createUserCSV(getNoOfUsers)
         try:
@@ -52,11 +57,10 @@ if (get_createOrSearchUser == 1):
                 createUsersBool = True
             elif(wantToAddMoreUserCheck == False):
                 createUsersBool = False
-                break
         except:
             print("Try again :)")            
 elif (get_createOrSearchUser == 2):
-    while readUserBool:
+    while readUserBool == True:
         get_userName = input("Enter the username you want to find: ")
         get_psswrd = input("Enter the password you want to find: ")
         searchUserCSV(get_userName,get_psswrd)
@@ -73,5 +77,5 @@ elif(get_createOrSearchUser == 2):
     print("-Goodbye-")
 else:
     print("Run the Code again")
-    
+
 file_handlr.close()
