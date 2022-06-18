@@ -4,3 +4,4 @@ for each_line in line_list:
     seperateEachWords = each_line.split()
     for each_word in seperateEachWords:
         print('{} # '.format(each_word), end='')
+file_handlr.close()
