@@ -52,23 +52,24 @@ if (get_createOrSearchUser == 1):
         getNoOfUsers = int(input("How many users u want to add: "))
         createUserCSV(getNoOfUsers)
         try:
-            wantToAddMoreUserCheck = bool(input("Case-sensitive input\nWant to add more users(True/False)?: "))
-            if(wantToAddMoreUserCheck == True):
+            wantToAddMoreUserCheck = input("Want to add more users(y/n)?: ")
+            if(wantToAddMoreUserCheck == 'y'):
                 createUsersBool = True
-            elif(wantToAddMoreUserCheck == False):
+            elif(wantToAddMoreUserCheck == 'n'):
                 createUsersBool = False
         except:
-            print("Try again :)")            
+            print("Try again :)")  
+    print("-Goodbye-")          
 elif (get_createOrSearchUser == 2):
     while readUserBool == True:
         get_userName = input("Enter the username you want to find: ")
         get_psswrd = input("Enter the password you want to find: ")
         searchUserCSV(get_userName,get_psswrd)
         try:
-                wantToReadMoreUserCheck = bool(input("Case-sensitive input\nWant to read more users(True/False)?: "))
-                if(wantToReadMoreUserCheck == True):
+                wantToReadMoreUserCheck = input("Want to read more users(y/n)?: ")
+                if(wantToReadMoreUserCheck == 'y'):
                     readUserBool = True
-                elif(wantToReadMoreUserCheck == False):
+                elif(wantToReadMoreUserCheck =='n'):
                     readUserBool = False
         except:
                 print("Try again :)") 
