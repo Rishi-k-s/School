@@ -1,7 +1,7 @@
 import csv
 
 # file methords
-file_handlr = open(r"File Operations (CH2)\userList.csv","a+",newline='\n')
+file_handlr = open(r"File Operations (CH2)\userList.csv","r",newline='\n')
 writer_file = csv.writer(file_handlr,)
 reader_file = csv.reader(file_handlr)
 
@@ -38,6 +38,7 @@ def searchUserCSV(userName,psswrd):
             userExists = True
         elif (each_list[0] == userName and each_list[1] != psswrd):
             print("Wrong passwd")
+            userExists =True
         elif (each_list[0] != userName):
             userNOtExists = True
     if(userNOtExists == True and userExists == False):
@@ -70,6 +71,8 @@ elif (get_createOrSearchUser == 2):
                 if(wantToReadMoreUserCheck == 'y'):
                     readUserBool = True
                 elif(wantToReadMoreUserCheck =='n'):
+                    readUserBool = False
+                else:
                     readUserBool = False
         except:
                 print("Try again :)") 
