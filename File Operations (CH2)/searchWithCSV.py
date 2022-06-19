@@ -32,7 +32,7 @@ def createUserCSV (getNoOfUserToAdd):
 def searchUserCSV(userName,psswrd):
     userNOtExists = False
     userExists = False
-    for each_list in reader_file: 
+    for each_list in reader_file:
         if (each_list[0] == userName and each_list[1] == psswrd):
             print("********\nUsername: {}\nPassword: {}\nMail ID: {}\nPhonenumber: {}\n********".format(each_list[0],each_list[1],each_list[2],each_list[3]))
             userExists = True
