@@ -6,7 +6,7 @@ try:
 except:
     file_handlr = open(r"File Operations (CH2)\userPasswd.csv","w",newline='\n')
 
-writer_file = csv.writer(file_handlr,)
+writer_file = csv.writer(file_handlr)
 reader_file = csv.reader(file_handlr)
 
 #boolians
