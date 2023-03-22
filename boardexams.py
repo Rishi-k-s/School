@@ -62,37 +62,38 @@
 #     return counter
 
 # print(Count_Line())
-# import pickle
-# def WRITERED():
-#     fp_w = open("PLANTS.dat","ab")
-#     id = input("Enter ID: ")
-#     nm = input("Enter Name: ")
-#     pr = input("Enter Price: ")
-#     userList = [id,nm,pr]
-#     pickle.dump(userList,fp_w)
-#     fp_w.close()
+import pickle
+def WRITERED():
+    fp_w = open("PLANTS.dat","wb")
+    id = input("Enter ID: ")
+    nm = input("Enter Name: ")
+    pr = input("Enter Price: ")
+    userList = [id,nm,pr]
+    pickle.dump(userList,fp_w)
+    fp_w.close()
 
-# def SHOWHIGH():
-#     fp_r = open("PLANTS.dat","rb")
-#     while True:
-#         try:
-#             x = pickle.load(fp_r)
-#             print(x)
-#         except EOFError:
-#             break
+def SHOWHIGH():
+    fp_r = open("PLANTS.dat","rb")
+    while True:
+        try:
+            x = pickle.load(fp_r)
+            if(int(x[0]) > 23):
+                print(x)
+        except EOFError:
+            break
     
-#     fp_r.close()
+    fp_r.close()
 
-# menu = True
+menu = True
 
-# while menu:
-#     x = int(input("-->"))
-#     if(x == 1):
-#         WRITERED()
-#     elif(x == 2):
-#         SHOWHIGH()
-#     else:
-#         menu = False
+while menu:
+    x = int(input("-->"))
+    if(x == 1):
+        WRITERED()
+    elif(x == 2):
+        SHOWHIGH()
+    else:
+        menu = False
 
 # x = "Sreeejesh is beactyful"
 # x= x.split()
@@ -115,7 +116,18 @@
 # for K in range(FROM,TO+1):
 #  print(AR[K],end="#") 
 
-a= []
-p = str(a)
-k = int(a)
-print(k)
+# a= []
+# p = str(a)
+# k = int(a)
+# print(k)
+
+
+# mainStack = []
+
+# getStr = input("Enter a string: ")
+# for eachWord in getStr:
+#     mainStack.append(eachWord)
+
+# for i in range (len(mainStack)-1,-1,-1):
+#     print(mainStack[i],end=" ")
+    
