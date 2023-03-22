@@ -126,6 +126,18 @@ import csv
 #         print(p,end="\t")
 #     print()
 
-l1 = [1,2,3,4,5]
+# l1 = [1,2,3,4,5]
 
-print(l1[:])
+# print(l1[:])
+
+i = 0
+
+while i<4:
+    i+=1
+print(i)
+
+
+# for i in range(5,26):
+#     if(i == 10):
+#         pass   
+#     print(i)
